@@ -365,6 +365,28 @@ footer ul a:hover {
     /* text-align: justify; */
 }
 
+
+/* *================================ 
+* CATEGORY POST (category-posts.html)
+* ================================ */
+.category__title {
+    height: 15rem;
+    margin-top: 4.5rem;
+    background: var(--color-gray-900);
+    display: grid;
+    place-items: center;
+}
+
+
+/* *================================ 
+* EMPTY PAGES (about.html, services.html, & contact.html)
+* ================================ */
+.empty__page {
+    height: 70vh;
+    display: grid;
+    place-content: center;
+}
+
 /* *================================ 
 * MEDIA QUERIES (MEDIUM DEVICES)
 * ================================ */
