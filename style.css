@@ -422,12 +422,12 @@ form {
 .form__control {
     display: flex;
     flex-direction: column;
-    gap: 0.4em;
+    gap: 0.6em;
 }
-/* .form__control.inline {
+.form__control.inline {
     flex-direction: row;
     align-items: center;
-} */
+}
 input, textarea, select {
     padding: 0.8rem 1.4rem;
     background: var(--color-gray-900);
