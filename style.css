@@ -388,7 +388,7 @@ footer ul a:hover {
 }
 
 /* *================================ 
-* GENERAL FORM (signup.html)
+* GENERAL FORM (signup.html, signin.html, add-category.html, add-post.html, add-user.html)
 * ================================ */
 .form__section {
     display: grid;
@@ -562,7 +562,7 @@ input, textarea, select {
         width: 60%;
     }
 
-       /* * =============== GENERAL FORM (signup.html) =============== */
+       /* * ======== GENERAL FORM (signup.html, signin.html, add-category.html, add-post.html, add-user.html) ======== */
     .form__section-container {
         padding: 3rem;
     }
@@ -609,7 +609,7 @@ input, textarea, select {
         padding: 0;
     }
 
-    /* * =============== GENERAL FORM (signup.html) =============== */
+    /* * ======== GENERAL FORM (signup.html, signin.html, add-category.html, add-post.html, add-user.html) ======== */
     .form__section-container {
         padding: 0;
     }
