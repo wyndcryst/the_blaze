@@ -8,7 +8,7 @@ require 'config/database.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The BLAZE - An ISCOF Dumangas School Publication</title>
+    <title>The BLAZE - The Official School Publication of ISCOF Dumangas Campus</title>
     <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@ require 'config/database.php';
                     <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
                     <li><a href="<?= ROOT_URL ?>services.php">Services</a></li>
                     <li><a href="<?= ROOT_URL ?>contact.php">Contact</a></li>
-                    <!-- <li><a href="signin.php">Sign In</a></li> -->
+                    <!-- <li><a href="signin.php">Sign in</a></li> -->
                     <li class="nav__profile">
                         <div class="avatar">
                             <img src="./images/avatar1.jpg">
