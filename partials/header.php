@@ -35,9 +35,9 @@ if (isset($_SESSION['user-id'])) {
 
                 <!-- <?php echo ROOT_URL ?> is equivalent also to <?= ROOT_URL ?> -->
 
-                <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
+                <li><a href="<?= ROOT_URL ?>blog.php">Stories</a></li>
                 <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
-                <li><a href="<?= ROOT_URL ?>services.php">Services</a></li>
+                <!-- <li><a href="<?= ROOT_URL ?>services.php">Services</a></li> -->
                 <li><a href="<?= ROOT_URL ?>contact.php">Contact</a></li>
                 <?php if (isset($_SESSION['user-id'])) : ?>
                     <li class="nav__profile">
