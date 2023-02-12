@@ -53,7 +53,7 @@ unset($_SESSION['signup-data']);
                     <input type="file" name="avatar" id="avatar">
                 </div>
                 <button type="submit" name="submit" class="btn">Sign Up</button>
-                <small>Already have an account? <a href="./signin.php">Sign In</a></small>
+                <small>Already have an account? <a href="signin.php">Sign In</a></small>
             </form>
         </div>
     </section>
