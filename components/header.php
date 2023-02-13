@@ -1,6 +1,5 @@
 <?php
-require 'config/database.php';
-// require './admin/config/database.php';
+require '../config/database.php';
 
 // fetch current user from database
 if (isset($_SESSION['user-id'])) {
@@ -13,7 +12,6 @@ if (isset($_SESSION['user-id'])) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
