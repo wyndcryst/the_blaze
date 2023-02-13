@@ -1,5 +1,5 @@
 <?php
-require 'config/database.php';
+require '../config/database.php';
 
 // get signup form data if signup button was clicked
 if (isset($_POST['submit'])) {
@@ -43,13 +43,13 @@ if (isset($_POST['submit'])) {
                 $time = time(); // make each image name unique using current timestamp
                 $avatar_name = $time . $avatar['name'];
                 $avatar_tmp_name = $avatar['tmp_name'];
-                $avatar_destination_path = 'images/' . $avatar_name;
+                $avatar_destination_path = '../images/' . $avatar_name;
 
                 // make sure file is an image
                 $allowed_files = ['png', 'jpg', 'jpeg'];
-                $extention = explode('.', $avatar_name);
-                $extention = end($extention);
-                if (in_array($extention, $allowed_files)) {
+                $extension = explode('.', $avatar_name);
+                $extension = end($extension);
+                if (in_array($extension, $allowed_files)) {
                     // make sure image is not too large (1mb+)
                     if ($avatar['size'] < 1000000) {
                         // upload avatar

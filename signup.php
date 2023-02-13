@@ -29,7 +29,7 @@ unset($_SESSION['signup-data']);
 </head>
 
 <body>
-    
+
     <section class="form__section">
         <div class="container form__section-container">
             <h2>Sign Up</h2>
@@ -42,7 +42,7 @@ unset($_SESSION['signup-data']);
                     </p>
                 </div>
             <?php endif ?>
-            <form action="<?= ROOT_URL ?>signup-logic.php" enctype="multipart/form-data" method="POST">
+            <form action="<?= ROOT_URL ?>logics/signup-logic.php" enctype="multipart/form-data" method="POST">
                 <input type="text" name="firstname" value="<?= $firstname ?>" placeholder="First Name">
                 <input type="text" name="lastname" value="<?= $lastname ?>" placeholder="Last Name">
                 <input type="text" name="username" value="<?= $username ?>" placeholder="Username">

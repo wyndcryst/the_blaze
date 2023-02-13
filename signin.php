@@ -44,7 +44,7 @@ unset($_SESSION['signin-data']);
                 </div>
             <?php endif ?>
 
-            <form action="<?= ROOT_URL ?>signin-logic.php" method="POST">
+            <form action="<?= ROOT_URL ?>logics/signin-logic.php" method="POST">
                 <input type="text" name="username_email" value="<?= $username_email ?>" placeholder="Username or Email">
                 <input type="password" name="password" value="<?= $password ?>" placeholder="Password">
                 <button type="submit" name="submit" class="btn">Sign In</button>
