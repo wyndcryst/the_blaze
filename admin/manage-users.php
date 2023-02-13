@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 
 // fetch users from database but not current user
 $current_admin_id = $_SESSION['user-id'];
@@ -130,5 +130,5 @@ $users = mysqli_query($connection, $query);
 
 
 <?php
-include '../partials/footer.php';
+include '../components/footer.php';
 ?>

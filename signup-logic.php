@@ -1,15 +1,8 @@
 <?php
-session_start();
 require 'config/database.php';
 
-// get signup form data if signup button is clicked
+// get signup form data if signup button was clicked
 if (isset($_POST['submit'])) {
-
-    /** 
-     * Sanitizing and validating inputs is usually the first layer of defense. 
-     * Sanitizing consists of removing any unsafe character from user inputs, 
-     * and validating will check if the data is in the expected format and type. 
-     */
     $firstname = filter_var($_POST['firstname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $lastname = filter_var($_POST['lastname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
     $username = filter_var($_POST['username'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -28,7 +21,7 @@ if (isset($_POST['submit'])) {
     } elseif (!$email) {
         $_SESSION['signup'] = "Please enter your a valid email";
     } elseif (strlen($createpassword) < 8 || strlen($confirmpassword) < 8) {
-        $_SESSION['signup'] = "Password should be more than 8 characters";
+        $_SESSION['signup'] = "Password should be 8+ characters";
     } elseif (!$avatar['name']) {
         $_SESSION['signup'] = "Please add avatar";
     } else {
@@ -62,7 +55,7 @@ if (isset($_POST['submit'])) {
                         // upload avatar
                         move_uploaded_file($avatar_tmp_name, $avatar_destination_path);
                     } else {
-                        $_SESSION['signup'] = "File size is too big. Should be less than 1mb";
+                        $_SESSION['signup'] = "File size too big. Should be less than 1mb";
                     }
                 } else {
                     $_SESSION['signup'] = "File should be png, jpg, or jpeg";
@@ -84,7 +77,7 @@ if (isset($_POST['submit'])) {
 
         if (!mysqli_errno($connection)) {
             // redirect to login page with success message
-            $_SESSION['signup-success'] = "Registration is successful. You may now log in.";
+            $_SESSION['signup-success'] = "Registration successful. Please log in";
             header('location: ' . ROOT_URL . 'signin.php');
             die();
         }

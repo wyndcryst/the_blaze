@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 ?>
 
 <header class="category__title">
@@ -218,5 +218,5 @@ include 'partials/header.php';
 <!--============================= END OF CATEGORY BUTTONS =============================-->
 
 <?php
-include 'partials/footer.php';
+include 'components/footer.php';
 ?>

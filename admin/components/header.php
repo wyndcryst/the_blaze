@@ -1,5 +1,5 @@
 <?php
-require '../partials/header.php';
+require '../components/header.php';
 
 // check login status
 if (!isset($_SESSION['user-id'])) {

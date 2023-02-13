@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 
 // get back form data if there was an error
 $firstname = $_SESSION['add-user-data']['firstname'] ?? null;
@@ -48,5 +48,5 @@ unset($_SESSION['add-user-data']);
 </section>
 
 <?php
-include '../partials/footer.php';
+include '../components/footer.php';
 ?>

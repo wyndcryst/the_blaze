@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 ?>
 
 <section class="form__section">
@@ -30,5 +30,5 @@ include 'partials/header.php';
 </section>
 
 <?php
-include '../partials/footer.php';
+include '../components/footer.php';
 ?>

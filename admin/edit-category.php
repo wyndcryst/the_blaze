@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 
 if (isset($_GET['id'])) {
     $id = filter_var($_GET['id'], FILTER_SANITIZE_NUMBER_INT);
@@ -29,5 +29,5 @@ if (isset($_GET['id'])) {
 </section>
 
 <?php
-include '../partials/footer.php';
+include '../components/footer.php';
 ?>

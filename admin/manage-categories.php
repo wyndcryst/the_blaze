@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 
 // fetch categories from database
 $query = "SELECT * FROM categories ORDER BY title";
@@ -123,5 +123,5 @@ $categories = mysqli_query($connection, $query);
 </section>
 
 <?php
-include '../partials/footer.php';
+include '../components/footer.php';
 ?>

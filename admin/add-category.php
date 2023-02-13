@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 
 // get back form data if invalid
 $title = $_SESSION['add-category-data']['title'] ?? null;
@@ -28,5 +28,5 @@ unset($_SESSION['add-category-data']);
 </section>
 
 <?php
-include '../partials/footer.php';
+include '../components/footer.php';
 ?>

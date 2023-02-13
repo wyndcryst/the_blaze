@@ -1,5 +1,5 @@
 <?php
-include 'partials/header.php';
+include 'components/header.php';
 ?>
 
 <section class="empty__page">
@@ -7,5 +7,5 @@ include 'partials/header.php';
 </section>
 
 <?php
-include 'partials/footer.php';
+include 'components/footer.php';
 ?>
