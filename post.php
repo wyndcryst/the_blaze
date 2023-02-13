@@ -19,12 +19,6 @@ include 'components/header.php';
         </div>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quidem voluptatum, fugiat totam enim consequuntur maxime eius velit magnam officia ratione vel omnis libero reiciendis iure quas a pariatur inventore. Quas rem maiores fugit, iusto facilis assumenda accusamus excepturi voluptate.
         </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quidem voluptatum, fugiat totam enim consequuntur maxime eius velit magnam officia ratione vel omnis libero reiciendis iure quas a pariatur inventore. Quas rem maiores fugit, iusto facilis assumenda accusamus excepturi voluptate.
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quidem voluptatum, fugiat totam enim consequuntur maxime eius velit magnam officia ratione vel omnis libero reiciendis iure quas a pariatur inventore. Quas rem maiores fugit, iusto facilis assumenda accusamus excepturi voluptate.
-        </p>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, quidem voluptatum, fugiat totam enim consequuntur maxime eius velit magnam officia ratione vel omnis libero reiciendis iure quas a pariatur inventore. Quas rem maiores fugit, iusto facilis assumenda accusamus excepturi voluptate.
-        </p>
     </div>
 </section>
 <!--================================ END OF SINGLE POST ================================-->

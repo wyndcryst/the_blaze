@@ -48,9 +48,9 @@ if (isset($_POST['submit'])) {
 
                 // make sure file is an image
                 $allowed_files = ['png', 'jpg', 'jpeg'];
-                $extention = explode('.', $avatar_name);
-                $extention = end($extention);
-                if (in_array($extention, $allowed_files)) {
+                $extension = explode('.', $avatar_name);
+                $extension = end($extension);
+                if (in_array($extension, $allowed_files)) {
                     // make sure image is not too large (1mb+)
                     if ($avatar['size'] < 1000000) {
                         // upload avatar

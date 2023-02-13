@@ -12,7 +12,6 @@ $confirmpassword = $_SESSION['signup-data']['confirmpassword'] ?? null;
 unset($_SESSION['signup-data']);
 ?>
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,12 +26,10 @@ unset($_SESSION['signup-data']);
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- GOOGLE FONT (MONTSERRAT) -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
-
-
+    
     <section class="form__section">
         <div class="container form__section-container">
             <h2>Sign Up</h2>
@@ -62,7 +59,5 @@ unset($_SESSION['signup-data']);
         </div>
     </section>
 
-
 </body>
-
 </html>

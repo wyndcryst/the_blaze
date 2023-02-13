@@ -2,7 +2,6 @@
 include 'components/header.php';
 ?>
 
-
         <section class="featured">
             <div class="container featured__container">
                 <div class="post__thumbnail">
@@ -65,7 +64,6 @@ include 'components/header.php';
             </div>
         </section>
         <!--============================= END OF CATEGORY BUTTONS =============================-->
-
 
 <?php
 include 'components/footer.php';
