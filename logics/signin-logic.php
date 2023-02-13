@@ -31,10 +31,10 @@ if (isset($_POST['submit'])) {
                 // log user in
                 header('location: ' . ROOT_URL . 'admin/');
             } else {
-                $_SESSION['signin'] = "Please check your input";
+                $_SESSION['signin'] = "Please check your input.";
             }
         } else {
-            $_SESSION['signin'] = "User not found";
+            $_SESSION['signin'] = "User not found.";
         }
     }
 

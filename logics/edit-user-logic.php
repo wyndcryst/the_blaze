@@ -1,5 +1,5 @@
 <?php
-require 'config/database.php';
+require '../config/database.php';
 
 if (isset($_POST['submit'])) {
     // get updated form data
@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
         $result = mysqli_query($connection, $query);
 
         if (mysqli_errno($connection)) {
-            $_SESSION['edit-user'] = "Failed to update user.";
+            $_SESSION['edit-user'] = "Failed to update user $firstname.";
         } else {
             $_SESSION['edit-user-success'] = "User $firstname $lastname updated successfully.";
         }

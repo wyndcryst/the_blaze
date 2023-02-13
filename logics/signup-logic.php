@@ -13,21 +13,21 @@ if (isset($_POST['submit'])) {
 
     // validate input values
     if (!$firstname) {
-        $_SESSION['signup'] = "Please enter your First Name";
+        $_SESSION['signup'] = "Please enter your First Name.";
     } elseif (!$lastname) {
-        $_SESSION['signup'] = "Please enter your Last Name";
+        $_SESSION['signup'] = "Please enter your Last Name.";
     } elseif (!$username) {
-        $_SESSION['signup'] = "Please enter your Username";
+        $_SESSION['signup'] = "Please enter your Username.";
     } elseif (!$email) {
-        $_SESSION['signup'] = "Please enter your a valid email";
+        $_SESSION['signup'] = "Please enter your valid email.";
     } elseif (strlen($createpassword) < 8 || strlen($confirmpassword) < 8) {
-        $_SESSION['signup'] = "Password should be 8+ characters";
+        $_SESSION['signup'] = "Password must be 8+ characters.";
     } elseif (!$avatar['name']) {
-        $_SESSION['signup'] = "Please add avatar";
+        $_SESSION['signup'] = "Please add your avatar.";
     } else {
         // check if passwords don't match
         if ($createpassword !== $confirmpassword) {
-            $_SESSION['signup'] = "Passwords do not match";
+            $_SESSION['signup'] = "Passwords do not match.";
         } else {
             // hash password
             $hashed_password = password_hash($createpassword, PASSWORD_DEFAULT);
@@ -36,7 +36,7 @@ if (isset($_POST['submit'])) {
             $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email'";
             $user_check_result = mysqli_query($connection, $user_check_query);
             if (mysqli_num_rows($user_check_result) > 0) {
-                $_SESSION['signup'] = "Username or Email already exist";
+                $_SESSION['signup'] = "Username or Email already exists.";
             } else {
                 // WORK ON AVATAR
                 // rename avatar
@@ -52,10 +52,11 @@ if (isset($_POST['submit'])) {
                 if (in_array($extension, $allowed_files)) {
                     // make sure image is not too large (1mb+)
                     if ($avatar['size'] < 1000000) {
+                        
                         // upload avatar
                         move_uploaded_file($avatar_tmp_name, $avatar_destination_path);
                     } else {
-                        $_SESSION['signup'] = "File size too big. Should be less than 1mb";
+                        $_SESSION['signup'] = "File size too big. Should be less than 1Mb.";
                     }
                 } else {
                     $_SESSION['signup'] = "File should be png, jpg, or jpeg";
@@ -64,20 +65,21 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    // redirect back to signup pag eif there was any problem
+    // redirect back to signup page if there was any problem
     if (isset($_SESSION['signup'])) {
-        // pass form data back to sigup page
+        // pass form data back to signup page
         $_SESSION['signup-data'] = $_POST;
         header('location: ' . ROOT_URL . 'signup.php');
         die();
     } else {
         // insert new user into users table
         $insert_user_query = "INSERT INTO users SET firstname='$firstname', lastname='$lastname', username='$username', email='$email', password='$hashed_password', avatar='$avatar_name', is_admin=0";
+
         $insert_user_result = mysqli_query($connection, $insert_user_query);
 
         if (!mysqli_errno($connection)) {
             // redirect to login page with success message
-            $_SESSION['signup-success'] = "Registration successful. Please log in";
+            $_SESSION['signup-success'] = "Registration successful. You may now log in.";
             header('location: ' . ROOT_URL . 'signin.php');
             die();
         }

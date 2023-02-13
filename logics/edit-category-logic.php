@@ -1,5 +1,5 @@
 <?php
-require 'config/database.php';
+require '../config/database.php';
 
 if (isset($_POST['submit'])) {
     $id = filter_var($_POST['id'], FILTER_SANITIZE_NUMBER_INT);
@@ -8,15 +8,15 @@ if (isset($_POST['submit'])) {
 
     // validate input
     if (!$title || !$description) {
-        $_SESSION['edit-category'] = "Invalid form input on edit category page";
+        $_SESSION['edit-category'] = "Invalid form input on edit category page.";
     } else {
         $query = "UPDATE categories SET title='$title', description='$description' WHERE id=$id LIMIT 1";
         $result = mysqli_query($connection, $query);
 
         if (mysqli_errno($connection)) {
-            $_SESSION['edit-category'] = "Couldn't update category";
+            $_SESSION['edit-category'] = "Couldn't update category.";
         } else {
-            $_SESSION['edit-category-success'] = "Category $title was updated successfully";
+            $_SESSION['edit-category-success'] = "Category $title was updated successfully.";
         }
     }
 }

@@ -1,5 +1,5 @@
 <?php
-require 'config/database.php';
+require '../config/database.php';
 
 // make sure edit post button was clicked
 if (isset($_POST['submit'])) {
@@ -16,11 +16,11 @@ if (isset($_POST['submit'])) {
 
     // check and validate input values
     if (!$title) {
-        $_SESSION['edit-post'] = "Couldn't update post. Invalid form data on edit post page.";
+        $_SESSION['edit-post'] = "Couldn't update post. Please check post Title.";
     } elseif (!$category_id) {
-        $_SESSION['edit-post'] = "Couldn't update post. Invalid form data on edit post page.";
+        $_SESSION['edit-post'] = "Couldn't update post. Please check post Category.";
     } elseif (!$body) {
-        $_SESSION['edit-post'] = "Couldn't update post. Invalid form data on edit post page.";
+        $_SESSION['edit-post'] = "Couldn't update post. Please check post Body.";
     } else {
         // delete existing thumbnail if new thumbnail is available
         if ($thumbnail['name']) {
@@ -46,14 +46,13 @@ if (isset($_POST['submit'])) {
                     // upload avatar
                     move_uploaded_file($thumbnail_tmp_name, $thumbnail_destination_path);
                 } else {
-                    $_SESSION['edit-post'] = "Counldn't update post. Thumbnail size too big. Should be less than 2mb";
+                    $_SESSION['edit-post'] = "Couldn't update post, thumbnail size too big. Should be less than 2Mb.";
                 }
             } else {
-                $_SESSION['edit-post'] = "Counldn't update post. Thumbnail should be png, jpg or jpeg";
+                $_SESSION['edit-post'] = "Couldn't update post, thumbnail should be png, jpg, or jpeg.";
             }
         }
     }
-
 
     if ($_SESSION['edit-post']) {
         // redirect to manage form page if form was invalid
@@ -75,7 +74,7 @@ if (isset($_POST['submit'])) {
 
 
     if (!mysqli_errno($connection)) {
-        $_SESSION['edit-post-success'] = "Post updated successfully";
+        $_SESSION['edit-post-success'] = "Post updated successfully.";
     }
 }
 

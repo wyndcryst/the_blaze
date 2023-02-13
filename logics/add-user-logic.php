@@ -1,5 +1,5 @@
 <?php
-require 'config/database.php';
+require '../config/database.php';
 
 // get form data if submit button was clicked
 if (isset($_POST['submit'])) {
@@ -14,13 +14,13 @@ if (isset($_POST['submit'])) {
 
     // validate input values
     if (!$firstname) {
-        $_SESSION['add-user'] = "Please enter your First Name";
+        $_SESSION['add-user'] = "Please enter your First Name.";
     } elseif (!$lastname) {
-        $_SESSION['add-user'] = "Please enter your Last Name";
+        $_SESSION['add-user'] = "Please enter your Last Name.";
     } elseif (!$username) {
-        $_SESSION['add-user'] = "Please enter your Username";
+        $_SESSION['add-user'] = "Please enter your Username.";
     } elseif (!$email) {
-        $_SESSION['add-user'] = "Please enter your a valid email";
+        $_SESSION['add-user'] = "Please enter your valid email.";
     } elseif (strlen($createpassword) < 8 || strlen($confirmpassword) < 8) {
         $_SESSION['add-user'] = "Password should be more than 8 characters";
     } elseif (!$avatar['name']) {
@@ -28,7 +28,7 @@ if (isset($_POST['submit'])) {
     } else {
         // check if passwords don't match
         if ($createpassword !== $confirmpassword) {
-            $_SESSION['signup'] = "Passwords do not match";
+            $_SESSION['signup'] = "Passwords do not match.";
         } else {
             // hash password
             $hashed_password = password_hash($createpassword, PASSWORD_DEFAULT);
@@ -37,7 +37,7 @@ if (isset($_POST['submit'])) {
             $user_check_query = "SELECT * FROM users WHERE username='$username' OR email='$email'";
             $user_check_result = mysqli_query($connection, $user_check_query);
             if (mysqli_num_rows($user_check_result) > 0) {
-                $_SESSION['add-user'] = "Username or Email already exist";
+                $_SESSION['add-user'] = "Username or Email already exists.";
             } else {
                 // WORK ON AVATAR
                 // rename avatar
@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
                         // upload avatar
                         move_uploaded_file($avatar_tmp_name, $avatar_destination_path);
                     } else {
-                        $_SESSION['add-user'] = "File size is too big. Should be less than 1mb";
+                        $_SESSION['add-user'] = "File size too big. Should be less than 1Mb.";
                     }
                 } else {
                     $_SESSION['add-user'] = "File should be png, jpg, or jpeg";
