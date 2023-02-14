@@ -25,6 +25,9 @@ if (isset($_GET['id'])) {
             <input type="text" name="title" value="<?= $category['title'] ?>" placeholder="Title">
             <textarea rows="4" name="description" placeholder="Description"><?= $category['description'] ?></textarea>
             <button type="submit" name="submit" class="btn">Update Category</button>
+            <button type="button" class="btn">
+                <a href="manage-categories.php">Cancel</a>
+            </button>
         </form>
 
     </div>

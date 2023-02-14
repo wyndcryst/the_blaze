@@ -25,6 +25,9 @@ if (isset($_GET['id'])) {
                 <option value="1">Admin</option>
             </select>
             <button type="submit" name="submit" class="btn">Update User</button>
+            <button type="button" class="btn">
+                <a href="manage-users.php">Cancel</a>
+            </button>
         </form>
         
     </div>

@@ -42,6 +42,9 @@ if (isset($_GET['id'])) {
                 <input type="file" name="thumbnail" id="thumbnail">
             </div>
             <button type="submit" name="submit" class="btn">Update Post</button>
+            <button type="button" class="btn">
+                <a href="index.php">Cancel</a>
+            </button>
         </form>
 
     </div>

@@ -16,7 +16,7 @@ unset($_SESSION['add-user-data']);
 <section class="form__section">
     <div class="container form__section-container">
         <h2>Add User</h2>
-        
+
         <?php if (isset($_SESSION['add-user'])) : ?>
             <div class="alert__message error">
                 <p>
@@ -43,6 +43,9 @@ unset($_SESSION['add-user-data']);
                 <input type="file" name="avatar" id="avatar">
             </div>
             <button type="submit" name="submit" class="btn">Add User</button>
+            <button type="button" class="btn">
+                <a href="manage-categories.php">Cancel</a>
+            </button>
         </form>
     </div>
 </section>

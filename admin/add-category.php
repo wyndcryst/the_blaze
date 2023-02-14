@@ -25,6 +25,9 @@ unset($_SESSION['add-category-data']);
             <input type="text" value="<?= $title ?>" name="title" placeholder="Title">
             <textarea rows="4" value="<?= $description ?>" name="description" placeholder="Description"></textarea>
             <button type="submit" name="submit" class="btn">Add Category</button>
+            <button type="button" class="btn">
+                <a href="manage-categories.php">Cancel</a>
+            </button>
         </form>
     </div>
 </section>
