@@ -44,7 +44,7 @@ unset($_SESSION['add-user-data']);
             </div>
             <button type="submit" name="submit" class="btn">Add User</button>
             <button type="button" class="btn">
-                <a href="manage-categories.php">Cancel</a>
+                <a href="manage-users.php">Cancel</a>
             </button>
         </form>
     </div>
