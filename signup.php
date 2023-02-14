@@ -25,6 +25,7 @@ unset($_SESSION['signup-data']);
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <!-- GOOGLE FONT (MONTSERRAT) -->
+    <link rel="icon" type="image/x-icon" href="<?= ROOT_URL ?>/components/blaze_logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
