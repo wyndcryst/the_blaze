@@ -1,5 +1,5 @@
 <?php
-require '../config/database.php';
+require 'config/database.php';
 
 // fetch current user from database
 if (isset($_SESSION['user-id'])) {
