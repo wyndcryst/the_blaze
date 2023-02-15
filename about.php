@@ -3,7 +3,8 @@ include 'components/header.php';
 ?>
 
 <section class="empty__page">
-    <h1>About Page</h1>
+    <img src="<?= ROOT_URL ?>components/blaze.jpg" alt="">
+    <h1>About Us is Under Development</h1>
 </section>
 
 <?php

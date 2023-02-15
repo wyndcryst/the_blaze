@@ -400,12 +400,20 @@ footer ul a:hover {
 
 
 /* *================================ 
-* EMPTY PAGES (about.html, services.html, & contact.html)
+* EMPTY PAGES (about.html& contact.html)
 * ================================ */
 .empty__page {
     height: 70vh;
     display: grid;
     place-content: center;
+    text-align: center;
+}
+.empty__page img {
+    margin-left: auto;
+    margin-right: auto;
+    width: 85%;
+    margin-bottom: 2rem;
+    border-radius: 10px;
 }
 
 /* *================================ 
@@ -685,6 +693,13 @@ input, textarea, select {
     }
     .dashboard main table tr:hover td {
         background: transparent;
+    }
+
+
+
+/* * EMPTY PAGES (about.html& contact.html)  */
+    .empty__page h1 {
+        padding: 0 1rem;
     }
 }
 
