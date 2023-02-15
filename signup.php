@@ -20,11 +20,8 @@ unset($_SESSION['signup-data']);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP & MySQL Blog Application with Admin Panel</title>
-    <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
-    <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-    <!-- GOOGLE FONT (MONTSERRAT) -->
     <link rel="icon" type="image/x-icon" href="<?= ROOT_URL ?>/components/blaze_logo.png" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
@@ -32,7 +29,8 @@ unset($_SESSION['signup-data']);
 <body>
 
     <section class="form__section">
-        <div class="container form__section-container">
+        <div class="container form__section-container signup_logo">
+            <img src="components/blaze_logo.png" >
             <h2>Sign Up</h2>
             <?php if (isset($_SESSION['signup'])) : ?>
                 <div class="alert__message error">

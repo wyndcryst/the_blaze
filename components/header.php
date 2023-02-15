@@ -20,8 +20,6 @@ if (isset($_SESSION['user-id'])) {
     <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="icon" type="image/x-icon" href="<?= ROOT_URL ?>/components/blaze_logo.png" />
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
 
@@ -29,7 +27,10 @@ if (isset($_SESSION['user-id'])) {
     <!--================================ START OF NAV ================================-->
     <nav>
         <div class="container nav__container">
-            <a href="<?= ROOT_URL ?>" class="nav__logo">The BLAZE</a>
+            <a href="<?= ROOT_URL ?>" class="nav__logo">
+                <img src="<?= ROOT_URL ?>/components/blaze_logo.png">
+                The BLAZE
+            </a>
             <ul class="nav__items">
 
                 <!-- <?php echo ROOT_URL ?> is equivalent also to <?= ROOT_URL ?> -->

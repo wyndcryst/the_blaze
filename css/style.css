@@ -1,17 +1,12 @@
 :root {--color-primary: #927e22;
-    /* {--color-primary: #6f6af8; */
     --color-primary-light: hsla(242, 100%, 54%, 0.18);
-    /* --color-primary-light: hsl(242, 91%, 69%, 18%); */
     --color-primary-variant: #beae62;
-    /* --color-primary-variant: #5854c7; */
     --color-red: #da0f3f;
     --color-red-light: hsl(346, 87%, 46%, 15%);
     --color-green: #00c476;
     --color-green-light: hsl(156, 100%, 38%, 15%);
     --color-gray-900: #12126b;
-    /* --color-gray-900: #1e1e66; */
     --color-gray-700: #131181;
-    /* --color-gray-700: #2d2b7c; */
     --color-gray-300: rgba(242, 242, 254, 0.3);
     --color-gray-200: rgba(242, 242, 254, 0.7);
     --color-white: #f2f2fe;
@@ -118,11 +113,18 @@ nav button {
     height: 2.5rem;
     border-radius: 50%;
     overflow: hidden;
-    border: 0.3rem solid var(--color-bg);
+    border: 0.2rem solid var(--color-bg);
 }
 .nav__logo {
+    display: flex;
+    align-items: center;
     font-weight: 600;
     font-size: 1.2rem;
+}
+.nav__logo img {
+    width: 3.5rem;
+    height: 4rem;
+    /* display: block; */
 }
 .nav__items {
     display: flex;
@@ -166,7 +168,7 @@ nav button {
 * ================================ */
 .category__button {
     background: var(--color-primary-light);
-    color: var(--color-primary);
+    color: var(--color-primary-variant);
     display: inline-block;
     padding: 0.5rem 1rem;
     border-radius: var(--card-border-radius-2);
@@ -183,8 +185,7 @@ nav button {
 * GENERAL POST
 * ================================ */
 .post__thumbnail {
-    border-radius: var(--card-border-radius-5);
-    /* border-radius: var(--card-border-radius-5) 0; */
+    border-radius: 0 var(--card-border-radius-5);
     border: 0.5rem solid var(--color-gray-900);
     overflow: hidden;
     margin-bottom: 1.6rem;
@@ -382,7 +383,7 @@ footer ul a:hover {
 .singlepost__container p {
     margin-top: 1rem;
     line-height: 1.7;
-    /* text-align: justify; */
+    text-align: justify;
 }
 
 
@@ -418,8 +419,13 @@ footer ul a:hover {
 }
 .form__section-container {
     width: var(--form-width);
-    /* max-width: 1800px; */
-    /* margin-inline: auto; */
+}
+.form__section-container img {
+    margin-top: 0;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
 }
 .alert__message {
     padding: 0.8rem 1.4rem;
@@ -650,6 +656,13 @@ input, textarea, select {
     .form__section-container {
         padding: 3rem;
     }
+    .form__section-container img {
+        margin-top: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
 
     /* * =================== DASHBOARD (manage-categories, manage-users, dashboard) =================== */
     .dashboard__container {
@@ -719,6 +732,13 @@ input, textarea, select {
     /* * ======== GENERAL FORM (signup, signin, add-category, add-post, add-user, edit-category, edit-post, edit-user) ======== */
     .form__section-container {
         padding: 0;
+    }
+    .form__section-container img {
+        margin-top: 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 60%;
     }
 
     /* * =================== DASHBOARD (manage-categories, manage-users, dashboard) =================== */

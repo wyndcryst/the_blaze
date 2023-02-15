@@ -25,6 +25,7 @@ unset($_SESSION['signin-data']);
 
     <section class="form__section">
         <div class="container form__section-container">
+            <img src="components/blaze_logo.png" >
             <h2>Sign In</h2>
 
             <?php if (isset($_SESSION['signup-success'])) : ?>
